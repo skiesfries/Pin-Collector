@@ -1,0 +1,14 @@
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\bin\Debug\netcoreapp3.1\Pin Collector.exe
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\bin\Debug\netcoreapp3.1\Pin Collector.deps.json
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\bin\Debug\netcoreapp3.1\Pin Collector.runtimeconfig.json
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\bin\Debug\netcoreapp3.1\Pin Collector.runtimeconfig.dev.json
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\bin\Debug\netcoreapp3.1\Pin Collector.dll
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\bin\Debug\netcoreapp3.1\Pin Collector.pdb
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\obj\Debug\netcoreapp3.1\Pin Collector.csproj.AssemblyReference.cache
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\obj\Debug\netcoreapp3.1\Pin Collector.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\obj\Debug\netcoreapp3.1\Pin Collector.AssemblyInfoInputs.cache
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\obj\Debug\netcoreapp3.1\Pin Collector.AssemblyInfo.cs
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\obj\Debug\netcoreapp3.1\Pin Collector.csproj.CoreCompileInputs.cache
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\obj\Debug\netcoreapp3.1\Pin Collector.dll
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\obj\Debug\netcoreapp3.1\Pin Collector.pdb
+C:\Users\Sky\Desktop\Visual Studio Projects\Pin Collector\Pin Collector\obj\Debug\netcoreapp3.1\Pin Collector.genruntimeconfig.cache
