@@ -28,8 +28,8 @@ namespace Pin_Collector
             
             WriteLine("Press Enter to begin managing your collection!");
             ReadKey(true);
-
-            RunMainMenu();
+            while(true)
+                RunMainMenu();
         }   
 
         private void RunMainMenu()
@@ -56,42 +56,15 @@ namespace Pin_Collector
             }
         }
 
-        //private void YesOrNoMenu(string yesOrNoPrompt)
-        //{
-        //    string prompt = yesOrNoPrompt;
-        //    string[] menuOptions = { "Yes", "No" };
-        //    Menu yesOrNoMenu = new Menu(prompt, menuOptions);
-        //    int selectedIndex = yesOrNoMenu.Run();
-
-        //    switch (selectedIndex)
-        //    {
-        //        case 0:
-        //            Environment.Exit(0);
-        //            break;
-        //        case 1:
-        //            RunMainMenu();
-        //            break;
-        //    }
-        //}
-
 
         private void Exit()
         {
-            //YesOrNoMenu("Are you sure you would like to exit?");
-            string prompt = "Are you sure you would like to exit?";
-            string[] menuOptions = { "Yes", "No" };
-            Menu yesOrNoMenu = new Menu(prompt, menuOptions);
-            int selectedIndex = yesOrNoMenu.Run();
 
-            switch (selectedIndex)
+            if (new YesNoMenu("Are you sure you would like to exit?").isYes())
             {
-                case 0:
-                    Environment.Exit(0);
-                    break;
-                case 1:
-                    RunMainMenu();
-                    break;
+                Environment.Exit(0);
             }
+         
         }
 
         private void AddNewPin()
@@ -114,7 +87,9 @@ namespace Pin_Collector
 
             WriteLine("\n\nWhat is the name of your new pin?");
             string newPinName = ReadLine();
-            WriteLine("Is the name " + newPinName + " correct?");
+            //WriteLine("Is the name " + newPinName + " correct?");
+
+            var iscorrect = new YesNoMenu("Is the name " + newPinName + " correct?").isYes();
             //int selectedIndex = yesOrNoMenu.Run("Is the name " + newPinName + " correct?");
         }
 

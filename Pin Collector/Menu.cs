@@ -5,7 +5,7 @@ using static System.Console;
 
 namespace Pin_Collector
 {
-    class Menu
+    public class Menu
     {
         public int selectedIndex;
         public string[] menuOptions;
@@ -18,7 +18,7 @@ namespace Pin_Collector
             selectedIndex = 0;
         }
 
-        private void DisplayOptions()
+        protected void DisplayOptions()
         {
             WriteLine(Prompt);
             for (int i = 0; i < menuOptions.Length; i++)
@@ -57,7 +57,7 @@ namespace Pin_Collector
                 if (keyPressed == ConsoleKey.UpArrow)
                 {
                     selectedIndex--;
-                    if(selectedIndex == -1)
+                    if (selectedIndex == -1)
                     {
                         selectedIndex = menuOptions.Length - 1;
                     }
@@ -65,7 +65,7 @@ namespace Pin_Collector
                 else if (keyPressed == ConsoleKey.DownArrow)
                 {
                     selectedIndex++;
-                    if(selectedIndex == menuOptions.Length)
+                    if (selectedIndex == menuOptions.Length)
                     {
                         selectedIndex = 0;
                     }
@@ -74,5 +74,8 @@ namespace Pin_Collector
 
             return selectedIndex;
         }
+
+
+
     }
 }
