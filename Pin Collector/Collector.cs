@@ -56,8 +56,28 @@ namespace Pin_Collector
             }
         }
 
+        //private void YesOrNoMenu(string yesOrNoPrompt)
+        //{
+        //    string prompt = yesOrNoPrompt;
+        //    string[] menuOptions = { "Yes", "No" };
+        //    Menu yesOrNoMenu = new Menu(prompt, menuOptions);
+        //    int selectedIndex = yesOrNoMenu.Run();
+
+        //    switch (selectedIndex)
+        //    {
+        //        case 0:
+        //            Environment.Exit(0);
+        //            break;
+        //        case 1:
+        //            RunMainMenu();
+        //            break;
+        //    }
+        //}
+
+
         private void Exit()
         {
+            //YesOrNoMenu("Are you sure you would like to exit?");
             string prompt = "Are you sure you would like to exit?";
             string[] menuOptions = { "Yes", "No" };
             Menu yesOrNoMenu = new Menu(prompt, menuOptions);
@@ -76,7 +96,26 @@ namespace Pin_Collector
 
         private void AddNewPin()
         {
+            Clear();
+            string newPinTitle = @"
+ .-----------------. .----------------.  .----------------.   .----------------.  .----------------.  .-----------------.
+| .--------------. || .--------------. || .--------------. | | .--------------. || .--------------. || .--------------. |
+| | ____  _____  | || |  _________   | || | _____  _____ | | | |   ______     | || |     _____    | || | ____  _____  | |
+| ||_   \|_   _| | || | |_   ___  |  | || ||_   _||_   _|| | | |  |_   __ \   | || |    |_   _|   | || ||_   \|_   _| | |
+| |  |   \ | |   | || |   | |_  \_|  | || |  | | /\ | |  | | | |    | |__) |  | || |      | |     | || |  |   \ | |   | |
+| |  | |\ \| |   | || |   |  _|  _   | || |  | |/  \| |  | | | |    |  ___/   | || |      | |     | || |  | |\ \| |   | |
+| | _| |_\   |_  | || |  _| |___/ |  | || |  |   /\   |  | | | |   _| |_      | || |     _| |_    | || | _| |_\   |_  | |
+| ||_____|\____| | || | |_________|  | || |  |__/  \__|  | | | |  |_____|     | || |    |_____|   | || ||_____|\____| | |
+| |              | || |              | || |              | | | |              | || |              | || |              | |
+| '--------------' || '--------------' || '--------------' | | '--------------' || '--------------' || '--------------' |
+ '----------------'  '----------------'  '----------------'   '----------------'  '----------------'  '----------------' ";
 
+            Write(newPinTitle);
+
+            WriteLine("\n\nWhat is the name of your new pin?");
+            string newPinName = ReadLine();
+            WriteLine("Is the name " + newPinName + " correct?");
+            //int selectedIndex = yesOrNoMenu.Run("Is the name " + newPinName + " correct?");
         }
 
         private void ViewAllPins()

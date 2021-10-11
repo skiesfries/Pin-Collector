@@ -1,25 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pupsf\\Documents\\Github\\Pin-Collector\\Pin Collector\\Pin Collector.csproj": {}
+    "C:\\Users\\Sky\\Documents\\GitHub\\Pin-Collector\\Pin Collector\\Pin Collector.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pupsf\\Documents\\Github\\Pin-Collector\\Pin Collector\\Pin Collector.csproj": {
+    "C:\\Users\\Sky\\Documents\\GitHub\\Pin-Collector\\Pin Collector\\Pin Collector.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pupsf\\Documents\\Github\\Pin-Collector\\Pin Collector\\Pin Collector.csproj",
+        "projectUniqueName": "C:\\Users\\Sky\\Documents\\GitHub\\Pin-Collector\\Pin Collector\\Pin Collector.csproj",
         "projectName": "Pin Collector",
-        "projectPath": "C:\\Users\\pupsf\\Documents\\Github\\Pin-Collector\\Pin Collector\\Pin Collector.csproj",
-        "packagesPath": "C:\\Users\\pupsf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pupsf\\Documents\\Github\\Pin-Collector\\Pin Collector\\obj\\",
+        "projectPath": "C:\\Users\\Sky\\Documents\\GitHub\\Pin-Collector\\Pin Collector\\Pin Collector.csproj",
+        "packagesPath": "C:\\Users\\Sky\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sky\\Documents\\GitHub\\Pin-Collector\\Pin Collector\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\pupsf\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Sky\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

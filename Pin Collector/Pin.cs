@@ -7,5 +7,6 @@ namespace Pin_Collector
     class Pin
     {
         public string name;
+        public string dateAdded;
     }
 }
