@@ -9,7 +9,7 @@ namespace Pin_Collector
     {
         public void Start()
         {
-            Console.Title = "ASCII Art";
+            Console.Title = "Pin Collector 1.0";
             string title = @"
  
   _____ _          _____      _ _           _               __   ___  
@@ -22,20 +22,71 @@ namespace Pin_Collector
                                                                       
             
                                                                  ";
-            
+
             Console.WriteLine(title);
 
+            
             WriteLine("Press Enter to begin managing your collection!");
             ReadKey(true);
 
+            RunMainMenu();
+        }   
+
+        private void RunMainMenu()
+        {
             string prompt = "Hello! What would you like to do today?\n";
             string[] menuOptions = { "Add New Pin to Collection", "View All Pins in Collection", "Edit Owned Pins", "Exit the Pin Collector" };
             Menu mainMenu = new Menu(prompt, menuOptions);
             int selectedIndex = mainMenu.Run();
 
-            
+            switch (selectedIndex) 
+            {
+                case 0:
+                    AddNewPin();
+                    break;
+                case 1:
+                    ViewAllPins();
+                    break;
+                case 2:
+                    EditPins();
+                    break;
+                case 3:
+                    Exit();
+                    break;
+            }
+        }
 
-            ReadKey(true);
+        private void Exit()
+        {
+            string prompt = "Are you sure you would like to exit?";
+            string[] menuOptions = { "Yes", "No" };
+            Menu yesOrNoMenu = new Menu(prompt, menuOptions);
+            int selectedIndex = yesOrNoMenu.Run();
+
+            switch (selectedIndex)
+            {
+                case 0:
+                    Environment.Exit(0);
+                    break;
+                case 1:
+                    RunMainMenu();
+                    break;
+            }
+        }
+
+        private void AddNewPin()
+        {
+
+        }
+
+        private void ViewAllPins()
+        {
+
+        }
+
+        private void EditPins()
+        {
+
         }
     }
 }

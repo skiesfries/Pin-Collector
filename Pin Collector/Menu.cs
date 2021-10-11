@@ -57,10 +57,18 @@ namespace Pin_Collector
                 if (keyPressed == ConsoleKey.UpArrow)
                 {
                     selectedIndex--;
+                    if(selectedIndex == -1)
+                    {
+                        selectedIndex = menuOptions.Length - 1;
+                    }
                 }
                 else if (keyPressed == ConsoleKey.DownArrow)
                 {
                     selectedIndex++;
+                    if(selectedIndex == menuOptions.Length)
+                    {
+                        selectedIndex = 0;
+                    }
                 }
             } while (keyPressed != ConsoleKey.Enter);
 
