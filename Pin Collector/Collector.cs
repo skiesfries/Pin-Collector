@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using static System.Console;
 
+
 namespace Pin_Collector
 {
-    class Collector
+    public class Collector
     {
         public void Start()
         {
@@ -57,7 +58,7 @@ namespace Pin_Collector
         }
 
 
-        private void Exit()
+        public void Exit()
         {
 
             if (new YesNoMenu("Are you sure you would like to exit?").isYes())
@@ -67,7 +68,7 @@ namespace Pin_Collector
          
         }
 
-        private void AddNewPin()
+        public void AddNewPin()
         {
             Clear();
             string newPinTitle = @"
@@ -85,17 +86,17 @@ namespace Pin_Collector
 
             Write(newPinTitle);
 
-            WriteLine("\n\nWhat is the name of your new pin?");
-            string newPinName = ReadLine();
-            //WriteLine("Is the name " + newPinName + " correct?");
-
-            var iscorrect = new YesNoMenu("Is the name " + newPinName + " correct?").isYes();
-            //int selectedIndex = yesOrNoMenu.Run("Is the name " + newPinName + " correct?");
+            AddNewPin addNewPin = new AddNewPin();
+            addNewPin.GetName();
+            addNewPin.GetCollection();
+            addNewPin.GetCharacter();
+            addNewPin.isInformationCorrect();
         }
 
         private void ViewAllPins()
         {
-
+            PinList viewPins = new PinList();
+            viewPins.ListAllPins();
         }
 
         private void EditPins()

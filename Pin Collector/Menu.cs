@@ -61,6 +61,7 @@ namespace Pin_Collector
                     {
                         selectedIndex = menuOptions.Length - 1;
                     }
+                 
                 }
                 else if (keyPressed == ConsoleKey.DownArrow)
                 {
@@ -69,6 +70,7 @@ namespace Pin_Collector
                     {
                         selectedIndex = 0;
                     }
+                   
                 }
             } while (keyPressed != ConsoleKey.Enter);
 
