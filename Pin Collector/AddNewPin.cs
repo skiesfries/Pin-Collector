@@ -32,7 +32,7 @@ namespace Pin_Collector
 
         public void GetCharacter()
         {
-            WriteLine("\nWhat is the name of the character portrayed on your pin? (If it is not a character, please enter \"Other\".");
+            WriteLine("\nWhat is the name of the character portrayed on your pin? (If it is not a character, please enter \"Other\").");
             newPinCharacter = ReadLine();
             
         }

@@ -1,0 +1,16 @@
+Pin Collector 1.0
+
+-can now successfully add pins and save them to the view all pins menu,
+after adding multiple pins you can view them all in the order they were added, from the main menu.
+
+TODO:
+
+-Edit/Delete Pin from Pin List
+
+-after user is told pin is saved, it should ask them to press space to add another pin or enter to return 
+to the main menu.
+
+-Need to be able to reorganize list by name, collection, character.
+
+
+
