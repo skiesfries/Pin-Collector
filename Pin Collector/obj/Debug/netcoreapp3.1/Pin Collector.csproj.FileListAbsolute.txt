@@ -42,3 +42,5 @@ C:\Users\Sky\Documents\GitHub\Pin-Collector\Pin Collector\obj\Debug\netcoreapp3.
 C:\Users\Sky\Documents\GitHub\Pin-Collector\Pin Collector\obj\Debug\netcoreapp3.1\Pin Collector.genruntimeconfig.cache
 C:\Users\Sky\Documents\GitHub\Pin-Collector\Pin Collector\bin\Debug\netcoreapp3.1\ConsoleTables.dll
 C:\Users\Sky\Documents\GitHub\Pin-Collector\Pin Collector\obj\Debug\netcoreapp3.1\Pin Collector.csproj.CopyComplete
+C:\Users\pupsf\Documents\Github\Pin-Collector\Pin Collector\bin\Debug\netcoreapp3.1\ConsoleTables.dll
+C:\Users\pupsf\Documents\Github\Pin-Collector\Pin Collector\obj\Debug\netcoreapp3.1\Pin Collector.csproj.CopyComplete

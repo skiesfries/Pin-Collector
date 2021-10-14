@@ -13,7 +13,7 @@ namespace Pin_Collector
 
         public void GetName()
         {
-            WriteLine("\n\nWhat is the name of your new pin?");
+            WriteLine("\n\nWhat is the name of your pin?");
             newPinName = ReadLine();
 
         }
@@ -65,13 +65,16 @@ namespace Pin_Collector
                     SavePin();
                     break;
                 case 1:
-                  
+                    GetName();
+                    isInformationCorrect();
                     break;
                 case 2:
-                  
+                    GetCollection();
+                    isInformationCorrect();
                     break;
                 case 3:
-               
+                    GetCharacter();
+                    isInformationCorrect();
                     break;
             }
         }
