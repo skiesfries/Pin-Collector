@@ -31,10 +31,12 @@ namespace Pin_Collector
             ReadKey(true);
             while(true)
                 RunMainMenu();
+
         }   
 
         private void RunMainMenu()
         {
+
             string prompt = "Hello! What would you like to do today?\n";
             string[] menuOptions = { "Add New Pin to Collection", "View All Pins in Collection", "Edit Owned Pins", "Exit the Pin Collector" };
             Menu mainMenu = new Menu(prompt, menuOptions);
@@ -91,6 +93,8 @@ namespace Pin_Collector
             addNewPin.GetCollection();
             addNewPin.GetCharacter();
             addNewPin.isInformationCorrect();
+
+           
         }
 
         private void ViewAllPins()

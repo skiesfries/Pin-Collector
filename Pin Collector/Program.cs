@@ -8,6 +8,8 @@ namespace Pin_Collector
         {
             Collector pinCollector = new Collector();
             pinCollector.Start();
+
+            
         }
     }
 }

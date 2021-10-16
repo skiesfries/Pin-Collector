@@ -20,6 +20,7 @@ namespace Pin_Collector
 
         public void GetCollection()
         {
+
             string prompt = "\nWhat collection is your pin from?";
             string[] menuOptions = { "Disney", "Pokemon", "Pixar", "Animals", "Movie", "TV Show", "Other" };
             Menu collectionMenu = new Menu(prompt, menuOptions);
@@ -28,13 +29,25 @@ namespace Pin_Collector
             
             newPinCollection = menuOptions[selectedIndex];
 
+            if (newPinCollection == menuOptions[6])
+            {
+                WriteLine("\nWhat is the name of the collection your pin is in?");
+                newPinCollection = ReadLine();
+            }
+
         }
 
         public void GetCharacter()
         {
             WriteLine("\nWhat is the name of the character portrayed on your pin? (If it is not a character, please enter \"Other\").");
             newPinCharacter = ReadLine();
-            
+
+            if (newPinCharacter == "Other")
+            {
+                WriteLine("\nWhat is portrayed in your pin?");
+                newPinCharacter = ReadLine();
+            }
+
         }
         
         
