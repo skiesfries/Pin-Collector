@@ -19,7 +19,7 @@ namespace Pin_Collector
                 ForegroundColor = ConsoleColor.Cyan;
             }
 
-            return $"Name: {Name}      Collection: {Collection}      Character: {Character}";
+            return $"Name: {Name.PadRight(30, ' ')}\tCollection: {Collection.PadRight(12, ' ')}\tCharacter: {Character.PadRight(12, ' ')}";
           
         }
 

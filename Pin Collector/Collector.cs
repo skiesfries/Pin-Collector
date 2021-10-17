@@ -68,7 +68,6 @@ namespace Pin_Collector
 
         }
 
-
         public void Exit()
         {
 
