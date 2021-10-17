@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static System.Console;
 
+using static System.Console;
 
 namespace Pin_Collector
 {
@@ -11,6 +11,8 @@ namespace Pin_Collector
         public void Start()
         {
             Console.Title = "Pin Collector 1.0";
+            Clear();
+            ForegroundColor = ConsoleColor.Cyan;
             string title = @"
  
   _____ _          _____      _ _           _               __   ___  
@@ -26,11 +28,13 @@ namespace Pin_Collector
 
             Console.WriteLine(title);
 
-            
+            ResetColor();
             WriteLine("Press Enter to begin managing your collection!");
-            ReadKey(true);
+          
+                ReadKey(true);
             while(true)
                 RunMainMenu();
+
 
         }   
 
@@ -38,7 +42,7 @@ namespace Pin_Collector
         {
 
             string prompt = "Hello! What would you like to do today?\n";
-            string[] menuOptions = { "Add New Pin to Collection", "View All Pins in Collection", "Edit Owned Pins", "Exit the Pin Collector" };
+            string[] menuOptions = { "Add New Pin to Collection", "View All Pins in Collection", "Edit Owned Pins", "Delete a Pin", "Exit the Pin Collector" };
             Menu mainMenu = new Menu(prompt, menuOptions);
             int selectedIndex = mainMenu.Run();
 
@@ -54,9 +58,14 @@ namespace Pin_Collector
                     EditPins();
                     break;
                 case 3:
+                    DeletePins();
+                    break;
+                case 4:
                     Exit();
                     break;
+                
             }
+
         }
 
 
@@ -66,6 +75,9 @@ namespace Pin_Collector
             if (new YesNoMenu("Are you sure you would like to exit?").isYes())
             {
                 Environment.Exit(0);
+            } else
+            {
+                Start();
             }
          
         }
@@ -73,6 +85,7 @@ namespace Pin_Collector
         public void AddNewPin()
         {
             Clear();
+            ForegroundColor = ConsoleColor.Cyan;
             string newPinTitle = @"
  .-----------------. .----------------.  .----------------.   .----------------.  .----------------.  .-----------------.
 | .--------------. || .--------------. || .--------------. | | .--------------. || .--------------. || .--------------. |
@@ -87,25 +100,57 @@ namespace Pin_Collector
  '----------------'  '----------------'  '----------------'   '----------------'  '----------------'  '----------------' ";
 
             Write(newPinTitle);
+            ResetColor();
 
             AddNewPin addNewPin = new AddNewPin();
             addNewPin.GetName();
             addNewPin.GetCollection();
             addNewPin.GetCharacter();
             addNewPin.isInformationCorrect();
-
-           
+            
         }
 
         private void ViewAllPins()
         {
             PinList viewPins = new PinList();
-            viewPins.ListAllPins();
+            viewPins.ListAllPins("view");
+
+            ConsoleKeyInfo keyPressed;
+            while (true)
+            {
+                keyPressed = Console.ReadKey();
+                if (keyPressed.Key == ConsoleKey.F1)
+                {
+                    Start();
+                }
+            }
         }
 
         private void EditPins()
         {
+            PinList editPins = new PinList();
+            editPins.ListAllPins("edit");
+            editPins.EditPin();
+            ConsoleKeyInfo keyPressed;
+            while (true)
+            {
+                keyPressed = Console.ReadKey();
+                if (keyPressed.Key == ConsoleKey.Enter)
+                {
+                    RunMainMenu();
+                }
+                else if (keyPressed.Key == ConsoleKey.Spacebar)
+                {
+                    EditPins();
+                }
+            }
+        }
 
+        private void DeletePins()
+        {
+            PinList deletePins = new PinList();
+            deletePins.ListAllPins("delete");
+            deletePins.DeletePin();
         }
     }
 }

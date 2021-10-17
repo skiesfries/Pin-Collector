@@ -56,17 +56,22 @@ namespace Pin_Collector
             var Pin = new Pin() { Name = newPinName, Collection = newPinCollection, Character = newPinCharacter};
             PinList.OwnedPins.Add(Pin);
 
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             WriteLine("\nYour Pin as been saved!");
+
+            Console.ForegroundColor = ConsoleColor.White;
+            WriteLine("\nPress any key to return to the main menu.");
             ReadKey();
           
         }
+       
 
         public void isInformationCorrect()
         {
             var Pin = new Pin() { Name = newPinName, Collection = newPinCollection, Character = newPinCharacter };
-
-
-            string prompt = $"\n{Pin.GetPinForDisplay()}\n\nIf this information is correct, select \"SAVE\" to add this pin to your collection. Otherwise, select the information that is incorrect to modify it.";
+            
+            
+            string prompt = $"\n{Pin.GetPinForDisplay("cyan")}\n\n{Pin.IsInfoCorrectResetColor()}";
             string[] menuOptions = {"SAVE", "Modify Name", "Modify Collection","Modify Character"};
             Menu iscorrect = new Menu(prompt, menuOptions);
             int selectedIndex = iscorrect.Run();
